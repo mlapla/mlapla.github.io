@@ -4,7 +4,19 @@
     <router-link to="/about">About</router-link>
   </div>
   <router-view/>
+  <UnderConstruction/>
 </template>
+
+<script>
+import UnderConstruction from "@/components/UnderConstruction";
+
+export default {
+  name: 'App',
+  components: {
+    UnderConstruction
+  }
+}
+</script>
 
 <style>
 #app {
