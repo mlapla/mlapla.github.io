@@ -1,3 +1,5 @@
 module.exports = {
-	publicPath: '/webpage/'
+  publicPath: process.env.NODE_ENV === 'production'
+    ? '/mlapla.github.io/'
+    : '/'
 }
