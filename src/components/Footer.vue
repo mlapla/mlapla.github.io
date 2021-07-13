@@ -11,7 +11,7 @@
     >
       <Contact/>
       <v-card-text class="white--text">
-        Copyright &copy; 2020 Copyright Holder All Rights Reserved. <br>
+        Copyright &copy; 2021 Copyright Holder All Rights Reserved. <br>
       </v-card-text>
     </v-card>
   </v-footer>

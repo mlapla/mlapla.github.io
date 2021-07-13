@@ -17,6 +17,7 @@
       </v-avatar>
 
       <v-btn to="/">Home</v-btn>
+      <v-btn to="/projects"></v-btn>
       <v-btn to="/about">About</v-btn>
 
       <v-spacer></v-spacer>
