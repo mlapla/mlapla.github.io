@@ -2,7 +2,6 @@
   <div class="tweets">
     <v-card
         class="mx-auto"
-        max-width="400"
     >
       <a  class="twitter-timeline"
           href="https://twitter.com/mikeLapla?ref_src=twsrc%5Etfw"
