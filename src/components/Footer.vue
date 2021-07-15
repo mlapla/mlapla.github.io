@@ -1,5 +1,6 @@
 <template lang="html">
   <v-footer
+      app
       v-bind="localAttrs"
       :padless="padless"
   >
@@ -9,7 +10,7 @@
         width="100%"
         class="grey lighten-1 text-center"
     >
-      <Contact/>
+
       <v-card-text class="white--text">
         Copyright &copy; 2021 Copyright Holder All Rights Reserved. <br>
       </v-card-text>
@@ -18,11 +19,9 @@
 </template>
 
 <script>
-import Contact from '@/components/Contact.vue'
 export default {
   name: 'Footer',
   components: {
-    Contact
   },
   data: () => ({
     padless: true,

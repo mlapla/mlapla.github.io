@@ -1,18 +1,24 @@
 <template>
   <div class="home">
-    <HelloWorld/>
+    <Projects id="projects"/>
+    <About id="about"/>
     <Tweets/>
+    <Footer/>
   </div>
 </template>
 
 <script>
-import HelloWorld from '@/components/HelloWorld.vue';
+import Footer from '@/components/Footer'
+import About from '@/components/About';
+import Projects from '@/components/Projects';
 import Tweets from '@/components/Tweets.vue';
 export default {
   name: 'Home',
   
   components: {
-    HelloWorld,
+    Projects,
+    About,
+    Footer,
     Tweets,
   },
 };

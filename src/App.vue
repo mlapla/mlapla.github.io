@@ -1,46 +1,41 @@
 <template>
-
-  <v-app :theme="theme">
+  <v-app>
     <AppBar/>
-    <v-main>
-      <v-container>
-        <transition name="fade" mode="out-in">
+    <v-main class="grey lighten-3">
+      <v-container class="py-0 fill-height" style="width:50%;max-width:1000px;">
+        <v-sheet
+          min-height="70vh"
+          rounded="lg"
+        >
           <router-view/>
-        </transition>
+        </v-sheet>
       </v-container>
     </v-main>
-    <Footer/>
   </v-app>
 </template>
 
 <script>
-import logo from '@/assets/logo.svg'
-import AppBar from '@/components/AppBar.vue'
-import Footer from '@/components/Footer.vue'
+import AppBar from '@/components/AppBar'
 export default {
   name: 'App',
-  logo,
   components: {
     AppBar,
-    Footer
   }
 }
 </script>
 
 <style>
-.v-app-bar-title {
+a {
+  text-decoration: none;
   font-family: 'Source Code Pro', monospace;
 }
 
-/* Page transitions */
-.fade-enter-active, .fade-leave-active {
-  transition-duration: 0.3s;
-  transition-property: opacity, transform;
-  transition-timing-function: ease;
+i {
+  font-family: FontAwesome;
 }
 
-.fade-enter, .fade-leave-active {
-  transform: translate(1em,0);
-  opacity: 0;
+h1, h2, h3, h4, h5 {
+  margin: 1em;
+  font-family: 'Source Code Pro', monospace;
 }
 </style>
