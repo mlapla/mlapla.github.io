@@ -69,28 +69,28 @@ function init(canvas) {
 	ctx.scale(dpi, dpi)
 
 	// Scene
-	function createGrid () {
-		ctx.save()
-		ctx.strokeStyle = 'gray' // line colors
-		ctx.fillStyle = 'black' // text color
-		ctx.lineWidth = 0.5
-
-		ctx.beginPath()
-		// draw vertical from X to Height
-		for (let x = 0; x < canvas.width; x += step) {
-			ctx.moveTo(x,0)
-			ctx.lineTo(x,canvas.height)
-		}
-
-		for (let y = 0; y < canvas.height; y += step) {
-			ctx.moveTo(0,y)
-			ctx.lineTo(canvas.width,y)
-		}
-		ctx.closePath()
-		ctx.stroke()
-
-		ctx.restore()
-	}
+	// function createGrid () {
+	// 	ctx.save()
+	// 	ctx.strokeStyle = 'gray' // line colors
+	// 	ctx.fillStyle = 'black' // text color
+	// 	ctx.lineWidth = 0.5
+	//
+	// 	ctx.beginPath()
+	// 	// draw vertical from X to Height
+	// 	for (let x = 0; x < canvas.width; x += step) {
+	// 		ctx.moveTo(x,0)
+	// 		ctx.lineTo(x,canvas.height)
+	// 	}
+	//
+	// 	for (let y = 0; y < canvas.height; y += step) {
+	// 		ctx.moveTo(0,y)
+	// 		ctx.lineTo(canvas.width,y)
+	// 	}
+	// 	ctx.closePath()
+	// 	ctx.stroke()
+	//
+	// 	ctx.restore()
+	// }
 
 	function generatePts() {
 		let pts = []
@@ -105,7 +105,7 @@ function init(canvas) {
 		return pts
 	}
 
-	createGrid()
+	// createGrid()
 
 	let pts = generatePts()
 	pts.forEach(pt => pt.draw())
@@ -139,17 +139,24 @@ function init(canvas) {
 
 	function pushWave() {
 		wave.col = 0
-		waveMotionTimer = setInterval(wave,freq * 5) // start wave
+		let r = Math.random()
+		if (r < 0.5)
+			waveMotionTimer = setInterval(() => wave(true),freq * 5) // start wave
+		else
+			waveMotionTimer = setInterval(() => wave(false),freq * 5) // start wave
 	}
 
-	function wave() {
+	function wave(isRandom) {
 		if (wave.col >= Nx){
 			clearInterval(waveMotionTimer) 		// stop wave
 			setTimeout(pushWave,2000) 	// prepare next wave
 		}
 		let offset = wave.col * Ny
 		for (var j = 0; j < Ny; j++) {
-			pts[offset + j].vy += Math.random() * 100 - 50
+			if (isRandom)
+				pts[offset + j].vy += Math.random() * 100 - 50
+			else
+				pts[offset + j].vy += 25
 		}
 		wave.col++
 	}
@@ -160,7 +167,7 @@ function init(canvas) {
 		ctx.fillStyle = 'white'
 		ctx.fillRect(0,0,canvas.width,canvas.height)
 		ctx.restore()
-		createGrid()
+		// createGrid()
 		pts.forEach(pt => {
 			pt.dx += pt.vx * dt
 			pt.dy += pt.vy * dt
