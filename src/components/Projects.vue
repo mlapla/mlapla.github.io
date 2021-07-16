@@ -1,16 +1,21 @@
 <template>
   <div class="projects">
-  <v-layout row wrap>
-    <ProjectCard
-        v-for="item in projects"
-        :key="item.id"
-        :title="item.title"
-        :link="item.link"
-        :description="item.description"
-        :date="item.date"
-        :thumbnail="item.thumbnail"
-    />
-  </v-layout>
+    <v-flex d-flex>
+      <v-layout wrap>
+        <v-flex md4
+          v-for="item in projects"
+          :key="item.id"
+        >
+          <ProjectCard class="card"
+              :title="item.title"
+              :link="item.link"
+              :description="item.description"
+              :date="item.date"
+              :thumbnail="item.thumbnail"
+          />
+        </v-flex>
+      </v-layout>
+    </v-flex>
   </div>
 </template>
 
@@ -44,5 +49,8 @@ export default {
 </script>
 
 <style scoped>
-
+.card {
+  padding: 10px;
+  margin: 10px;
+}
 </style>
