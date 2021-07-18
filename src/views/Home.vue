@@ -16,7 +16,6 @@ import Tweets from '@/components/Tweets.vue';
 import Banner from "@/components/Banner";
 export default {
   name: 'Home',
-  
   components: {
     Banner,
     Projects,

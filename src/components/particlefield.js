@@ -152,7 +152,7 @@ function init(canvas) {
 			setTimeout(pushWave,2000) 	// prepare next wave
 		}
 		let offset = wave.col * Ny
-		for (var j = 0; j < Ny; j++) {
+		for (var j = 0; j < Ny && offset + j < pts.length; j++) {
 			if (isRandom)
 				pts[offset + j].vy += Math.random() * 100 - 50
 			else

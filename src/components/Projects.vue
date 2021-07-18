@@ -36,10 +36,19 @@ export default {
           'link': 'https://github.com/mlapla/png_quadtree_comp',
           'description': 'A simple textbook project where we compress PNGs by approximating regions with a similar color to a uniform color.',
           'date': '2020/08/23',
+          'thumbnail': 'thumbnail_code.png',
+        },
+        {
+          'id': '2',
+          'title': 'Simple Schrodinger solver',
+          'link': 'https://github.com/mlapla/simple_schrod_solver',
+          'description': 'A simple time-independent Schroëdinger equation solver based on the numerov approximation. This is a Python reimplementation of Nouredine Zetili\'s Quantum Mechanics: Concepts and Applications original C implementation.',
+          'date': '2020/09/03',
           'thumbnail': 'thumbnail_code.png'
         },
-        {},
-        {},
+        {
+
+        },
         {},
         {},
       ]

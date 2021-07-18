@@ -14,8 +14,8 @@
       />
     </v-avatar>
     <v-container class="py-0 fill-height">
-      <v-btn to="">Projects</v-btn>
-      <v-btn to="">About</v-btn>
+      <v-btn to="#projects">Projects</v-btn>
+      <v-btn to="#about">About</v-btn>
     </v-container>
   </v-app-bar>
 </template>
@@ -23,9 +23,6 @@
 <script>
 export default {
   name: "AppBar",
-  methods: {
-
-  }
 }
 </script>
 
