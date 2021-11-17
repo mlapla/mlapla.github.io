@@ -7,6 +7,10 @@ const routes = [
     name: 'Home',
     component: Home
   },
+  {
+    path: '/posts/1.md',
+    name: 'Post'
+  }
 ]
 
 const router = createRouter({

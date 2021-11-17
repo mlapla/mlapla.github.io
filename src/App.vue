@@ -2,7 +2,7 @@
   <v-app>
     <AppBar/>
     <v-main class="grey lighten-3">
-      <v-container class="py-0 fill-height" style="width:50%;max-width:1000px;">
+      <v-container class="py-0 fill-height" style="min-width:500px;max-width:1000px;">
         <v-sheet
           min-height="70vh"
           rounded="lg"

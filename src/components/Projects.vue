@@ -7,8 +7,9 @@
           :key="item.id"
         >
           <ProjectCard class="card"
+              :id="item.id"
               :title="item.title"
-              :link="item.link"
+              :github_link="item.link"
               :description="item.description"
               :date="item.date"
               :thumbnail="item.thumbnail"
@@ -36,7 +37,7 @@ export default {
           'link': 'https://github.com/mlapla/png_quadtree_comp',
           'description': 'A simple textbook project where we compress PNGs by approximating regions with a similar color to a uniform color.',
           'date': '2020/08/23',
-          'thumbnail': 'thumbnail_code.png',
+          'thumbnail': 'png_to_quad.png',
         },
         {
           'id': '2',
