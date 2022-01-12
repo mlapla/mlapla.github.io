@@ -48,10 +48,13 @@ export default {
           'thumbnail': 'thumbnail_code.png'
         },
         {
-
+          'id': '3',
+          'title': 'Tiling shaders in ThreeJS',
+          'link': 'https://github.com/mlapla/threejs_shader_tiling',
+          'description': 'A simple ThreeJS setup to tile planar shaders. Perfect for testing a large amount of procedural graphics and snippets from ShaderToy.',
+          'date': '2021/11/16',
+          'thumbnail': 'thumbnail_code.png'
         },
-        {},
-        {},
       ]
     }
   }

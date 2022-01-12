@@ -22,7 +22,7 @@
       <v-spacer/>
       <v-btn
         :href="'/posts/'+id+'.md'"
-        color="primary"
+        elevation="2"
       >
         Read More
       </v-btn>

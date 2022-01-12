@@ -100,7 +100,7 @@ function init(canvas) {
 				pts.push(new Point( ctx, i , j , 0.5 ))
 			}
 		}
-		for (let j = step; j < canvas.height - 1 ; j += step){Ny++} // count the number of points in a column
+		for (let j = step; j < canvas.height - step ; j += 1){Ny++} // count the number of points in a column
 
 		return pts
 	}

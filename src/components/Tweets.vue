@@ -1,12 +1,12 @@
 <template lang="html">
-  <v-flex class="tweets">
+  <v-container id="tweets">
     <v-card>
-            <a  class="twitter-timeline"
-                href="https://twitter.com/mikeLapla?ref_src=twsrc%5Etfw"
-                data-tweet-limit="2"
-            >Tweets by mikeLapla</a>
-          </v-card>
-  </v-flex>
+      <a  class="twitter-timeline"
+          href="https://twitter.com/mikeLapla?ref_src=twsrc%5Etfw"
+          data-tweet-limit="3"
+      >Tweets by mikeLapla</a>
+    </v-card>
+  </v-container>
 </template>
 
 <script>
@@ -16,7 +16,8 @@ export default {
 </script>
 
 <style lang="css" scoped>
-.tweets {
+#tweets {
   width: 60%;
+  max-width: 500px;
 }
 </style>
