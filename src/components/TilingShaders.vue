@@ -1,12 +1,12 @@
 <template>
-    <div id="container"></div>
+    <div refs="container" id="container"></div>
 </template>
 
 <script>
-import init from './show.js';
+// import init from 'threejs-tiling-shaders';
 export default {
   mounted () {
-    init()
+    // init(this.$refs.container)
   },
   name: "TilingShaders"
 }

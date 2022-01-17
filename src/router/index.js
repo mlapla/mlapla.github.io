@@ -1,5 +1,6 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import TilingShaders from '../components/TilingShaders.vue'
 
 const routes = [
   {
@@ -10,6 +11,11 @@ const routes = [
   {
     path: '/posts/1.md',
     name: 'Post'
+  },
+  {
+    path: '/tiles',
+    name: 'ThreeJS Tiling Shaders',
+    component: TilingShaders
   }
 ]
 

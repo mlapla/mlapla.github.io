@@ -3,7 +3,7 @@
     <h2 class="text-center">About</h2>
     <v-container>
       <v-row>
-        <v-col>
+        <v-col cols="5">
           <Contact/>
         </v-col>
         <v-col>
