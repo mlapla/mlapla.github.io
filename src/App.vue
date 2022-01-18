@@ -1,30 +1,21 @@
 <template>
   <v-app>
-    <AppBar/>
-    <v-main class="grey lighten-3">
-      <v-container class="py-0 fill-height" style="min-width:500px;max-width:1000px;">
-        <v-sheet
-          min-height="70vh"
-          rounded="lg"
-        >
-          <router-view/>
-        </v-sheet>
-      </v-container>
-    </v-main>
+    <router-view/>
   </v-app>
 </template>
 
 <script>
-import AppBar from '@/components/AppBar'
 export default {
   name: 'App',
-  components: {
-    AppBar,
-  },
 }
 </script>
 
 <style>
+body, html{
+  margin:0;
+  padding:0;
+}
+
 a {
   text-decoration: none;
   font-family: 'Source Code Pro', monospace;

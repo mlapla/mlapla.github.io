@@ -1,22 +1,15 @@
 <template>
   <div class="projects">
-    <v-flex d-flex>
-      <v-layout wrap>
-        <v-flex md4
-          v-for="item in projects"
-          :key="item.id"
-        >
-          <ProjectCard class="card"
-              :id="item.id"
-              :title="item.title"
-              :github_link="item.link"
-              :description="item.description"
-              :date="item.date"
-              :thumbnail="item.thumbnail"
-          />
-        </v-flex>
-      </v-layout>
-    </v-flex>
+    <v-card
+        class="d-flex justify-center flex-wrap"
+        flat
+    >
+      <ProjectCard class="card"
+                   v-for="item in projects"
+                   :key="item.id"
+                   :project_data="item"
+      />
+    </v-card>
   </div>
 </template>
 
@@ -32,12 +25,22 @@ export default {
     return {
       projects: [
         {
-          'id': '1',
-          'title': 'Quadtree Compression',
-          'link': 'https://github.com/mlapla/png_quadtree_comp',
-          'description': 'A simple textbook project where we compress PNGs by approximating regions with a similar color to a uniform color.',
-          'date': '2020/08/23',
-          'thumbnail': 'png_to_quad.png',
+          'id': '4',
+          'title': 'PBR Shading in ThreeJS',
+          'link': 'https://github.com/mlapla/threejs-pbr-demo',
+          'readmore_link': '/pbr-demo',
+          'description': 'An interactive PBR shading demo, ported to ThreeJS.',
+          'date': '2022/01/16',
+          'thumbnail': 'thumbnail_code.png'
+        },
+        {
+          'id': '3',
+          'title': 'Tiling shaders in ThreeJS',
+          'link': 'https://github.com/mlapla/threejs_shader_tiling',
+          'readmore_link': '/tiles',
+          'description': 'A simple ThreeJS setup to tile planar shaders. Perfect for testing a large amount of procedural graphics and snippets from ShaderToy.',
+          'date': '2021/11/16',
+          'thumbnail': 'thumbnail_code.png'
         },
         {
           'id': '2',
@@ -48,13 +51,13 @@ export default {
           'thumbnail': 'thumbnail_code.png'
         },
         {
-          'id': '3',
-          'title': 'Tiling shaders in ThreeJS',
-          'link': 'https://github.com/mlapla/threejs_shader_tiling',
-          'description': 'A simple ThreeJS setup to tile planar shaders. Perfect for testing a large amount of procedural graphics and snippets from ShaderToy.',
-          'date': '2021/11/16',
-          'thumbnail': 'thumbnail_code.png'
-        },
+          'id': '1',
+          'title': 'Quadtree Compression',
+          'link': 'https://github.com/mlapla/png_quadtree_comp',
+          'description': 'A simple textbook project where we compress PNGs by approximating regions with a similar color to a uniform color.',
+          'date': '2020/08/23',
+          'thumbnail': 'png_to_quad.png',
+        }
       ]
     }
   }

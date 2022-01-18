@@ -1,6 +1,8 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import Home from '../views/Home.vue'
-import TilingShaders from '../components/TilingShaders.vue'
+import TilingShaders from '../views/TilingShaders.vue'
+import PBRDemo from '../views/PBRDemo.vue'
+import NotFound from '../views/NotFound.vue'
 
 const routes = [
   {
@@ -16,6 +18,16 @@ const routes = [
     path: '/tiles',
     name: 'ThreeJS Tiling Shaders',
     component: TilingShaders
+  },
+  {
+    path: '/pbr-demo',
+    name: 'ThreeJS PBR demo',
+    component: PBRDemo
+  },
+  {
+    path: '/:catchAll(.*)',
+    component: NotFound,
+    name: 'NotFound'
   }
 ]
 
