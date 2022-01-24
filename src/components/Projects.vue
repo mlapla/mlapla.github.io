@@ -2,7 +2,7 @@
   <div class="projects">
     <v-card
         max-width="1300px"
-        class="d-flex justify-left flex-wrap"
+        class="d-inline-flex justify-center flex-wrap"
         flat
     >
         <ProjectCard class="card"
@@ -32,7 +32,7 @@ export default {
           'readmore_link': '/pbr-demo',
           'description': 'An interactive PBR shading demo, ported to ThreeJS.',
           'date': '2022/01/16',
-          'thumbnail': 'thumbnail_code.png'
+          'thumbnail': 'pbr_thumbnail.png'
         },
         {
           'id': '3',
@@ -74,6 +74,10 @@ export default {
 </script>
 
 <style scoped>
+.projects {
+  width: 100%;
+  text-align: center;
+}
 .card {
   padding: 10px;
   margin: 10px;

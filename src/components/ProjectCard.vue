@@ -1,7 +1,6 @@
 <template lang="html">
   <v-card
-      
-    class="mx-auto"
+    class=""
     width="400px"
     elevation="3"
   >
@@ -22,7 +21,7 @@
           :src="project_data.thumbnail !== undefined ? require('@/assets/thumbnails/' + project_data.thumbnail) : 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'"
       />
     </v-container>
-    <v-card-title>{{ project_data.title }}</v-card-title>
+    <v-card-title class="card-title">{{ project_data.title }}</v-card-title>
     <v-card-subtitle class="pb-0">{{ project_data.date }}</v-card-subtitle>
     <v-card-text class="truncate">
       {{ project_data.description }}
@@ -58,6 +57,10 @@ export default {
 <style lang="css" scoped>
 .fab {
   font-size: large;
+}
+
+.card-title {
+  font-family: 'Source Code Pro', monospace;
 }
 
 .crop-container {
