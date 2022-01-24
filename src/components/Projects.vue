@@ -1,14 +1,15 @@
 <template>
   <div class="projects">
     <v-card
-        class="d-flex justify-center flex-wrap"
+        max-width="1300px"
+        class="d-flex justify-left flex-wrap"
         flat
     >
-      <ProjectCard class="card"
-                   v-for="item in projects"
-                   :key="item.id"
-                   :project_data="item"
-      />
+        <ProjectCard class="card"
+                     v-for="item in projects"
+                     :key="item.id"
+                     :project_data="item"
+        />
     </v-card>
   </div>
 </template>
@@ -40,7 +41,7 @@ export default {
           'readmore_link': '/tiles',
           'description': 'A simple ThreeJS setup to tile planar shaders. Perfect for testing a large amount of procedural graphics and snippets from ShaderToy.',
           'date': '2021/11/16',
-          'thumbnail': 'thumbnail_code.png'
+          'thumbnail': 'JULIA2.png'
         },
         {
           'id': '2',
@@ -57,6 +58,14 @@ export default {
           'description': 'A simple textbook project where we compress PNGs by approximating regions with a similar color to a uniform color.',
           'date': '2020/08/23',
           'thumbnail': 'png_to_quad.png',
+        },
+        {
+          'id': '0',
+          'title': 'Personal Website in VueJS',
+          'link': 'https://github.com/mlapla/mlapla.github.io',
+          'description': 'A personal portfolio website in VueJS.',
+          'date': '2022/01/22',
+          'thumbnail': 'vue.png'
         }
       ]
     }

@@ -1,13 +1,27 @@
 <template lang="html">
   <v-card
-  width="400"
-  elevation="3"
+      
+    class="mx-auto"
+    width="400px"
+    elevation="3"
   >
-  <div class="crop-container">
-    <v-img
-        :src="project_data.thumbnail !== undefined ? require('@/assets/thumbnails/' + project_data.thumbnail) : 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'"
-    />
-  </div>
+    <template slot="progress">
+      <v-progress-linear
+          color="deep-purple"
+          height="10"
+          indeterminate
+      ></v-progress-linear>
+    </template>
+    <v-container
+      width="100%"
+      height="55%"
+    >
+      <v-img
+
+          :aspect-ratio="16/9"
+          :src="project_data.thumbnail !== undefined ? require('@/assets/thumbnails/' + project_data.thumbnail) : 'https://cdn.vuetifyjs.com/images/cards/docks.jpg'"
+      />
+    </v-container>
     <v-card-title>{{ project_data.title }}</v-card-title>
     <v-card-subtitle class="pb-0">{{ project_data.date }}</v-card-subtitle>
     <v-card-text class="truncate">
@@ -20,10 +34,11 @@
       </v-btn>
       <v-spacer/>
       <v-btn
-        :to=" project_data.readmore_link !== undefined ? project_data.readmore_link : '/posts/'+project_data.id+'.md'"
+        v-if="project_data.readmore_link"
+        :to="project_data.readmore_link"
         elevation="2"
       >
-        Read More
+        Demo
       </v-btn>
     </v-card-actions>
   </v-card>
