@@ -7,7 +7,6 @@ import { init, getStats, main } from '@/components/TilingShaders/threejs-tiling-
 export default {
   methods: {
     animate() {
-      console.log('animating')
       main()
     }
   },
@@ -15,12 +14,10 @@ export default {
     document.querySelector('#container').appendChild(init().domElement);
     document.querySelector('#container').appendChild(getStats());
     this.animate()
-    console.log('terminating?')
   },
   name: "TilingShaders"
 }
 </script>
 
 <style scoped>
-
 </style>

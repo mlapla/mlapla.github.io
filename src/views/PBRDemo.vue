@@ -7,7 +7,6 @@ import { init, mainLoop, showGUI, hideGUI } from '@/components/PBRDemo/PBR.js';
 export default {
   methods: {
     animate() {
-      console.log('animating');
       mainLoop();
     },
   },
@@ -20,7 +19,6 @@ export default {
     document.querySelector('#container').appendChild(init().domElement);
     this.animate();
     showGUI();
-    console.log('terminating?');
   },
   name: "PBRDemo"
 }

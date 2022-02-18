@@ -1,8 +1,9 @@
 // Michael Laplante 2021
 // particlefield.js
 
+
 class Point {
-	constructor ( 	ctx , x = 0, y = 0,
+	constructor( 	ctx , x = 0, y = 0,
 					radius = 10,
 					rotationRadius = 5,
 					fillColor = 'black',
